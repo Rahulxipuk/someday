@@ -1,0 +1,21 @@
+target/
+node_modules/
+dist/
+*.wasm
+!web/public/*.wasm
+.env
+.env.*
+!.env.example
+.vite/
+*.log
+.DS_Store
+deployments/*.secret.json
+.local/
+video/*
+!video/someday-demo.mp4
+tools/video/timeline.json
+.claude/
+someday-proposal.md
+
+# The compiled contracts in target/near/ and the trustee in .local/ are committed on purpose,
+# with git add -f, so the tests and the local demo run with Node alone.

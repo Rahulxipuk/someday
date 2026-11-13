@@ -1,0 +1,16 @@
+﻿[package]
+name = "someday-collection"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "The Someday NEP-171 collection and parent account that creates keyless trusts."
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = { workspace = true }
+near-contract-standards = { workspace = true }
+someday-shared = { path = "../shared" }
+serde_json = { workspace = true }
+base64 = { workspace = true }

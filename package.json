@@ -1,0 +1,22 @@
+{
+    "name": "someday",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "license": "MIT",
+    "scripts": {
+        "test": "node --test tests/",
+        "build": "node scripts/build.mjs",
+        "build:contracts": "node scripts/build.mjs contracts",
+        "build:enclave": "node scripts/build.mjs enclave",
+        "local": "node tools/localnet/local.mjs"
+    },
+    "devDependencies": {
+        "@bytecodealliance/jco": "^1.17.6",
+        "@noble/ciphers": "^2.4.0",
+        "@noble/curves": "^2.4.0",
+        "@noble/hashes": "^2.4.0",
+        "binaryen": "^132.0.0",
+        "near-api-js": "^7.4.0"
+    }
+}

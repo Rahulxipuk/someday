@@ -1,0 +1,38 @@
+[package]
+name = "someday-trustee"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "The Someday trustee: reads sealed wishes inside an OutLayer enclave and decides a holder's request."
+
+[[bin]]
+name = "someday-trustee"
+path = "src/main.rs"
+
+[features]
+default = []
+# Local builds only: answers from fixed rules instead of a model. Never part of the deployed wasm.
+stub = []
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hex = "0.4"
+base64 = "0.22"
+sha2 = "0.10"
+hkdf = "0.12"
+chacha20poly1305 = { version = "0.10", default-features = false, features = ["alloc"] }
+x25519-dalek = { version = "2", default-features = false, features = ["static_secrets"] }
+
+[target.'cfg(target_os = "wasi")'.dependencies]
+wasi-http-client = "0.2"
+getrandom = "0.3"
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true
+codegen-units = 1
+panic = "abort"
+
+[workspace]

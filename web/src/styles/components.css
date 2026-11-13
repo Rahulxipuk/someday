@@ -1,0 +1,433 @@
+/* ---- quiet states ---- */
+
+.quiet-state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--text);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.breath {
+  flex: none;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: var(--wax);
+  animation: breath 2.6s ease-in-out infinite;
+}
+
+@keyframes breath {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--rule-strong);
+  background: var(--paper-sunk);
+}
+
+.note p {
+  flex: 1 1 220px;
+}
+
+.note-error {
+  border-left-color: var(--wax);
+}
+
+.empty {
+  padding: 28px 0;
+  color: var(--ink-soft);
+}
+
+.empty-title {
+  font-family: var(--text);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.sign-in-note {
+  color: var(--ink-soft);
+}
+
+.result {
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--leaf);
+  background: var(--paper-sunk);
+}
+
+.result-error {
+  border-left-color: var(--wax);
+}
+
+/* ---- rubber stamps ---- */
+
+.stamp {
+  display: inline-block;
+  flex: none;
+  padding: 0.42em 0.62em 0.36em;
+  border: 1.5px solid currentColor;
+  border-radius: 3px;
+  font-family: var(--ui);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: rotate(-1.6deg);
+  opacity: 0.92;
+}
+
+.stamp-wax {
+  color: var(--wax);
+}
+
+.stamp-leaf {
+  color: var(--leaf);
+}
+
+.stamp-gold {
+  color: var(--gold);
+}
+
+.stamp-ink {
+  color: var(--ink-soft);
+}
+
+/* ---- form fields: written on a line, not typed into a box ---- */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.field label,
+.choices legend {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid var(--rule-strong);
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--text);
+  font-size: 1.2rem;
+  line-height: 1.35;
+  transition: border-color 0.2s ease;
+}
+
+.field select {
+  padding-right: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238c1f1f' stroke-width='1.4'/%3E%3C/svg%3E")
+    no-repeat right 2px center;
+  appearance: none;
+}
+
+.field select option {
+  background: var(--sheet);
+  color: var(--ink);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--ink-faint);
+  opacity: 0.75;
+  font-style: italic;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--wax);
+  box-shadow: 0 1px 0 var(--wax);
+}
+
+.field input[aria-invalid='true'],
+.field textarea[aria-invalid='true'] {
+  border-bottom-color: var(--wax);
+}
+
+.field input:disabled,
+.field textarea:disabled,
+.field select:disabled {
+  opacity: 0.55;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+/* A sheet of ruled paper with a red margin, for anything written by hand. */
+.field textarea.ruled,
+.composer textarea {
+  --line: 2rem;
+  padding: 0 14px 0 44px;
+  border: 1px solid var(--rule);
+  border-radius: 1px;
+  background-color: var(--sheet);
+  background-image:
+    linear-gradient(90deg, transparent 31px, color-mix(in srgb, var(--wax) 34%, transparent) 31px, color-mix(in srgb, var(--wax) 34%, transparent) 32px, transparent 32px),
+    linear-gradient(to bottom, transparent calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px));
+  background-size:
+    100% 100%,
+    100% var(--line);
+  background-attachment: local;
+  font-size: 1.25rem;
+  line-height: var(--line);
+}
+
+.field textarea.ruled:focus,
+.composer textarea:focus {
+  border-color: var(--wax);
+  box-shadow: none;
+}
+
+.field-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.field-hint {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--ink-faint);
+}
+
+.field-error {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--wax);
+}
+
+/* ---- ledgers ---- */
+
+.ledger > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 16px;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.ledger > div:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.ledger dt {
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+
+.ledger dd {
+  max-width: 34ch;
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: right;
+}
+
+.ledger .ledger-note {
+  grid-column: 1 / -1;
+  max-width: none;
+  padding-top: 2px;
+  font-family: var(--ui);
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+  text-align: left;
+}
+
+.ledger.compact dd {
+  font-size: 1rem;
+}
+
+.plain-list > div + div {
+  margin-top: 18px;
+}
+
+.plain-list dt {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 420;
+}
+
+.plain-list dd {
+  font-family: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.plain-list.small dt {
+  font-size: 1rem;
+}
+
+.plain-list.small dd {
+  font-size: 1.05rem;
+}
+
+/* ---- the number printed on the trust ---- */
+
+.worst {
+  padding: 18px 0;
+  border-block: 3px double var(--ink);
+}
+
+.worst-line {
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 2.6vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+.worst-more {
+  margin-top: 8px;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+.worst-inline {
+  font-family: var(--text);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* ---- a sheet of writing paper ---- */
+
+.composer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.composer-row {
+  display: grid;
+  grid-template-columns: minmax(0, 170px) auto;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.note-card {
+  padding: 22px 24px;
+  background: var(--sheet);
+  box-shadow: var(--shadow-sheet);
+}
+
+.note-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.note-card p {
+  font-family: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.42;
+  color: var(--ink-soft);
+}
+
+.note-card p + p {
+  margin-top: 10px;
+}
+
+.note-card .btn {
+  margin-top: 14px;
+}
+
+/* ---- panels ---- */
+
+.panel {
+  padding: clamp(18px, 3vw, 28px);
+  background: var(--paper-sunk);
+}
+
+section.panel + section.panel {
+  margin-top: 20px;
+}
+
+.panel-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-action {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  align-items: end;
+  gap: 12px 40px;
+  padding-block: 16px;
+  border-top: 1px solid var(--rule);
+}
+
+.panel-action:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.panel-action:last-child {
+  padding-bottom: 0;
+}
+
+.panel-action > .btn {
+  justify-self: end;
+}
+
+.panel-action strong {
+  font-weight: 600;
+}
+
+.inline-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 12px;
+}
+
+@media (max-width: 720px) {
+  .panel-action {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .panel-action > .btn {
+    justify-self: start;
+  }
+}
+
+/* A quick load shows nothing at all. Only a slow one says so. */
+.quiet-state[role='status'] {
+  animation: page-in 0.3s 0.35s ease both;
+}

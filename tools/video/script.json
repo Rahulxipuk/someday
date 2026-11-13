@@ -1,0 +1,226 @@
+{
+  "voices": {
+    "grandpa": {
+      "kokoro": "bm_george",
+      "lang": "en-gb",
+      "speed": 0.88,
+      "semitones": -1.5,
+      "ref_text": "When I was a young man, I used to walk down to the river every morning before work. I would stand there with my tea and think about the people I loved, and how quickly the years were going. I still think about them now."
+    },
+    "maya": {
+      "kokoro": "af_bella",
+      "lang": "en-us",
+      "speed": 1,
+      "semitones": 0.8,
+      "ref_text": "Okay, so I finally got the letter this morning, and I honestly could not believe it. I read it three times, standing right there in the kitchen. I called my best friend, and we both just started laughing."
+    },
+    "trustee": {
+      "kokoro": "bf_emma",
+      "lang": "en-gb",
+      "speed": 0.93,
+      "semitones": 0,
+      "ref_text": "Thank you for telling me. I have read what you wrote carefully, and I would like to help if I can. Please take your time, and tell me what you need, and we will see what can be done together."
+    }
+  },
+  "lines": [
+    {
+      "id": "g1",
+      "voice": "grandpa",
+      "emotion": 0.65,
+      "cfg": 0.35,
+      "takes": 3,
+      "text": "I'm eighty years old. I want to leave my granddaughter some money, but I won't be there to guide her.",
+      "human": "I'm eighty years old. <sigh> I want to leave my granddaughter some money, but I won't be there to guide her."
+    },
+    {
+      "id": "g2",
+      "voice": "grandpa",
+      "emotion": 0.6,
+      "cfg": 0.4,
+      "takes": 2,
+      "text": "A lawyer costs thousands. Hand it over, and it's gone in a week."
+    },
+    {
+      "id": "g3",
+      "voice": "grandpa",
+      "emotion": 0.65,
+      "cfg": 0.4,
+      "takes": 2,
+      "text": "So I used Someday. I wrote down what the money is for, and nobody else can read it."
+    },
+    {
+      "id": "g4",
+      "voice": "grandpa",
+      "emotion": 0.6,
+      "cfg": 0.4,
+      "takes": 4,
+      "text": "And I set a limit. Even if everything goes wrong, this is the most it can ever lose."
+    },
+    {
+      "id": "g6",
+      "voice": "grandpa",
+      "emotion": 0.65,
+      "cfg": 0.4,
+      "takes": 2,
+      "text": "It locks the money in an NFT that Maya owns. She can't take it out. She has to ask, and an AI can say no.",
+      "say": "It locks the money in an N F T that Maya owns. She can't take it out. She has to ask, and an A I can say no.",
+      "human": "It locks the money in an NFT that Maya owns. She can't take it out. She has to ask, and an AI can say no."
+    },
+    {
+      "id": "m1",
+      "voice": "maya",
+      "emotion": 0.95,
+      "cfg": 0.45,
+      "takes": 3,
+      "text": "I need money for a motorbike. Come on, Grandpa. Please?",
+      "human": "<chuckle> I need money for a motorbike. Come on, Grandpa. Please?"
+    },
+    {
+      "id": "t1",
+      "voice": "trustee",
+      "emotion": 0.45,
+      "cfg": 0.5,
+      "takes": 2,
+      "text": "I've decided not to release anything for this request. The trust can only help with learning or health costs."
+    },
+    {
+      "id": "m2a",
+      "voice": "maya",
+      "emotion": 1,
+      "cfg": 0.45,
+      "takes": 3,
+      "text": "It said no. To me!",
+      "human": "<gasp> It said no. To me!"
+    },
+    {
+      "id": "m2b",
+      "voice": "maya",
+      "emotion": 0.8,
+      "cfg": 0.4,
+      "takes": 3,
+      "text": "Okay. The truth is, the bus to college takes three hours each way, and I keep missing class.",
+      "human": "<sigh> Okay. The truth is, the bus to college takes three hours each way, and I keep missing class."
+    },
+    {
+      "id": "t2",
+      "voice": "trustee",
+      "emotion": 0.5,
+      "cfg": 0.5,
+      "takes": 2,
+      "text": "I've approved your request, and one NEAR is being sent directly to the school.",
+      "say": "I've approved your request, and one near is being sent directly to the school."
+    },
+    {
+      "id": "m3",
+      "voice": "maya",
+      "emotion": 0.6,
+      "cfg": 0.45,
+      "takes": 2,
+      "text": "The AI only says yes or no. The payment itself can never go past Grandpa's limit."
+    },
+    {
+      "id": "m4",
+      "voice": "maya",
+      "emotion": 1.1,
+      "cfg": 0.3,
+      "takes": 3,
+      "text": "Grandpa, I did it. I graduated today.",
+      "human": "Grandpa, <sniffle> I did it. I graduated today."
+    },
+    {
+      "id": "L1",
+      "voice": "grandpa",
+      "emotion": 0.7,
+      "cfg": 0.3,
+      "takes": 2,
+      "text": "Dear Maya."
+    },
+    {
+      "id": "L2",
+      "voice": "grandpa",
+      "emotion": 0.8,
+      "cfg": 0.3,
+      "takes": 3,
+      "text": "I knew you would do it. I knew it when you were six, and read the whole bus timetable aloud to me, because you wanted to know where everything went.",
+      "human": "I knew you would do it. I knew it when you were six, and read the whole bus timetable aloud to me, <chuckle> because you wanted to know where everything went."
+    },
+    {
+      "id": "L3a",
+      "voice": "grandpa",
+      "emotion": 0.75,
+      "cfg": 0.3,
+      "takes": 2,
+      "text": "Your grandmother left school at eleven, and never forgave the world for it."
+    },
+    {
+      "id": "L3b",
+      "voice": "grandpa",
+      "emotion": 0.95,
+      "cfg": 0.3,
+      "takes": 3,
+      "text": "She would have stood at the back of that hall, and cried, and told everyone it was the dust.",
+      "human": "She would have stood at the back of that hall, and cried, <sniffle> and told everyone it was the dust."
+    },
+    {
+      "id": "L4",
+      "voice": "grandpa",
+      "emotion": 0.85,
+      "cfg": 0.3,
+      "takes": 2,
+      "text": "This small gift is not for anything sensible. Buy something that makes you laugh.",
+      "human": "<chuckle> This small gift is not for anything sensible. Buy something that makes you laugh."
+    },
+    {
+      "id": "L5",
+      "voice": "grandpa",
+      "emotion": 1,
+      "cfg": 0.3,
+      "takes": 3,
+      "text": "With all my love, and more pride than one old man can carry.",
+      "human": "With all my love, <sigh> and more pride than one old man can carry."
+    },
+    {
+      "id": "m5",
+      "voice": "maya",
+      "emotion": 0.55,
+      "cfg": 0.45,
+      "takes": 3,
+      "text": "It runs on the NEAR blockchain. The money has its own account, and nobody has the key. Not me. Not anyone.",
+      "say": "It runs on the near blockchain. The money has its own account, and nobody has the key. Not me. Not anyone."
+    },
+    {
+      "id": "m7",
+      "voice": "maya",
+      "emotion": 0.55,
+      "cfg": 0.45,
+      "takes": 2,
+      "text": "And while it waits, the money keeps earning."
+    },
+    {
+      "id": "m9",
+      "voice": "maya",
+      "emotion": 0.9,
+      "cfg": 0.35,
+      "takes": 3,
+      "text": "Grandpa can't be here anymore. But he's still looking after me.",
+      "human": "Grandpa can't be here anymore. <sigh> But he's still looking after me."
+    },
+    {
+      "id": "m8a",
+      "voice": "maya",
+      "emotion": 0.75,
+      "cfg": 0.4,
+      "takes": 2,
+      "text": "Some days, it still says no to me."
+    },
+    {
+      "id": "m8b",
+      "voice": "maya",
+      "emotion": 0.95,
+      "cfg": 0.35,
+      "takes": 3,
+      "text": "I'm glad it does.",
+      "human": "<chuckle> I'm glad it does."
+    }
+  ]
+}

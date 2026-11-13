@@ -1,0 +1,9 @@
+[package]
+name = "someday-shared"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Types shared by the Someday collection and trust contracts."
+
+[dependencies]
+near-sdk = { workspace = true }

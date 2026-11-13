@@ -1,0 +1,14 @@
+﻿[package]
+name = "someday-trust"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "One Someday trust: a keyless account that is an NFT, with an enclave trustee bounded by on-chain rails."
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = { workspace = true }
+someday-shared = { path = "../shared" }
+serde_json = { workspace = true }

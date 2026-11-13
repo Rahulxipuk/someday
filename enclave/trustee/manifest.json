@@ -1,0 +1,5 @@
+{
+  "capabilities": {
+    "network": [{ "host": "cloud-api.near.ai", "timeout_secs": 40 }]
+  }
+}
